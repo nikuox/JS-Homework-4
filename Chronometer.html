@@ -4,13 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        font-family: arial;
+        color: yellow;
+        background: black;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "Permanent Marker", cursive;
+        font-size: 80px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-family: "Allerta Stencil", sans-serif;
+        font-size: 70px;
+        margin: 15px auto;
+        border: 2px yellow dotted;
+        width: 400px;
+        text-align: left;
+        padding: 10px;
+        text-align: center;
+      }
+
+      button {
+        font-size: 15px;
+        border-radius: 3px;
+      }
+
+      #extra-min {
+        margin-left: 10%;
+      }
+    </style>
   </head>
   <body>
-    <p>
+    <h1>Chronometer</h1>
+    <p id="all-time">
+      <span id="hour">0</span>: <span id="minute">0</span>:
+      <span id="second">0</span>
+    </p>
+    <!-- <button id="start-btn">Start</button> -->
+    <!-- <p>
       <span id="hour"></span>:<span id="minute"></span>:<span
         id="second"
       ></span>
-    </p>
+    </p> -->
     <script>
       let second = 0;
       let minute = 0;
@@ -33,7 +73,7 @@
           hour < 10 ? `0${hour}` : hour;
       }
       addSecond();
-      setInterval(addSecond, 1000);
+      setInterval(addSecond, 100);
     </script>
   </body>
 </html>
